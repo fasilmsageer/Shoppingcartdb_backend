@@ -22,7 +22,7 @@ public class ShoppingController {
     }
     @CrossOrigin(origins = "*")
     @PostMapping(path="/searchproduct", consumes = "application/json", produces = "application/json")
-    public List<ShoppingCart> SearchEmployee(@RequestBody ShoppingCart e){
+    public List<ShoppingCart> SearchProduct(@RequestBody ShoppingCart e){
         String name = String.valueOf(e.getName()) ;
         System.out.println(name);
         return (List<ShoppingCart>) dao.SearchProduct(e.getName());

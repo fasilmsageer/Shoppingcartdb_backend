@@ -15,6 +15,8 @@ public class ShoppingCart {
     @GeneratedValue
 
     private int id;
+
+    private String image;
     private String name;
     private String description;
     private String category;
@@ -22,13 +24,13 @@ public class ShoppingCart {
 
     public ShoppingCart(){}
 
-    public ShoppingCart(int id, String name, String description, String category, String price) {
+    public ShoppingCart(int id, String image, String name, String description, String category, String price) {
         this.id = id;
+        this.image = image;
         this.name = name;
         this.description = description;
         this.category = category;
         this.price = price;
-
     }
 
     public int getId() {
@@ -37,6 +39,14 @@ public class ShoppingCart {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getName() {
